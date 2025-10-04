@@ -1,70 +1,42 @@
 'use client';
 
-import { useWindowSize } from '@uidotdev/usehooks';
+import FolderObject from '@/features/home/components/folderObject';
 
 export default function HomePage() {
-  return (
-    <div className="flex h-screen items-center justify-center">
-      <FolderObject />
-    </div>
-  );
-}
-
-function FolderObject() {
-  const { width, height } = useWindowSize();
-
   const handleTabClick = () => {
     console.log('Tab clicked');
     alert('publicタブがクリックされました');
   };
 
-  // ウィンドウサイズに基づいてスケールを計算
-  const scale = Math.min((width || 1170) / 1170, (height || 1012) / 1012) * 0.8;
-
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={1170 * scale}
-      height={1012 * scale}
-      fill="none"
-      viewBox="0 0 1170 1012"
-      className="max-h-full max-w-full"
-    >
-      {/* フォルダ本体 */}
-      <path
-        fill="#d4c8b8"
-        d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
-        style={{ pointerEvents: 'none' }}
+    <div className="flex h-screen items-center justify-center">
+      <FolderObject
+        folderName="public"
+        handleTabClick={handleTabClick}
+        position={{
+          x: -40,
+          y: 40,
+          z: 0,
+        }}
       />
-      <path
-        stroke="#2b2825"
-        strokeWidth="4"
-        d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
-        fill="none"
-        style={{ pointerEvents: 'none' }}
+      <FolderObject
+        folderName="2"
+        handleTabClick={handleTabClick}
+        position={{
+          x: 0,
+          y: 0,
+          z: -1,
+        }}
       />
-
-      {/* インデックス部分*/}
-      <g onClick={handleTabClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }}>
-        <path fill="#d4c8b8" d="M822 14c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z" />
-        <path
-          stroke="#2b2825"
-          strokeWidth="4"
-          d="M822 14c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z"
-          fill="none"
-        />
-        <text
-          x="947"
-          y="38"
-          fontSize="32"
-          fontWeight="bold"
-          fill="#2B2825"
-          textAnchor="middle"
-          style={{ pointerEvents: 'none' }}
-        >
-          public
-        </text>
-      </g>
-    </svg>
+      <FolderObject
+        folderName="3"
+        handleTabClick={handleTabClick}
+        position={{
+          x: 40,
+          y: -40,
+          z: -2,
+        }}
+      />
+    </div>
   );
 }
