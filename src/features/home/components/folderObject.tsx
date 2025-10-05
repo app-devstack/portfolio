@@ -2,9 +2,11 @@
 
 import { useWindowSize } from '@uidotdev/usehooks';
 
+import { cn } from '@/lib/utils';
+
 type FolderObjectProps = {
   folderName: string;
-  handleTabClick: () => void;
+  handleFolderClick: () => void;
   position?: {
     x: number;
     y: number;
@@ -14,7 +16,7 @@ type FolderObjectProps = {
 
 export default function FolderObject({
   folderName = 'public',
-  handleTabClick,
+  handleFolderClick,
   position,
 }: FolderObjectProps) {
   const { width, height } = useWindowSize();
@@ -36,7 +38,10 @@ export default function FolderObject({
       height={1012}
       fill="none"
       viewBox="0 0 1170 1012"
-      className="max-h-full max-w-full"
+      className={cn(
+        'max-h-full max-w-full',
+        'transform transition-transform duration-200 ease-in-out hover:-translate-y-4'
+      )}
       style={{
         position: 'absolute',
         left: position ? `calc(50% + ${position.x}px)` : '50%',
@@ -49,18 +54,18 @@ export default function FolderObject({
       <path
         fill="#d4c8b8"
         d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
-        style={{ pointerEvents: 'none' }}
+        style={{ cursor: 'pointer', pointerEvents: 'auto' }}
+        onClick={handleFolderClick}
       />
       <path
         stroke="#2b2825"
         strokeWidth="4"
         d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
         fill="none"
-        style={{ pointerEvents: 'none' }}
       />
 
       {/* インデックス部分*/}
-      <g onClick={handleTabClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }}>
+      <g onClick={handleFolderClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }}>
         <path fill="#d4c8b8" d="M822 14c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z" />
         <path
           stroke="#2b2825"
