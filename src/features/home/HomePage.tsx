@@ -4,8 +4,7 @@ import FolderObject from '@/features/home/components/folderObject';
 
 export default function HomePage() {
   const handleFolderClick = (name: string) => {
-    console.log('Tab clicked');
-    alert(`${name}フォルダがクリックされました`);
+    console.log(`${name}フォルダがクリックされました`);
   };
 
   const folders = [
