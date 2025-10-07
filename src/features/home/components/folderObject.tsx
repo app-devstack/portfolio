@@ -66,17 +66,17 @@ export default function FolderObject({
 
       {/* インデックス部分*/}
       <g onClick={handleFolderClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }}>
-        <path fill="#d4c8b8" d="M822 14c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z" />
+        <path fill="#d4c8b8" d="M822 17c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z" />
         <path
           stroke="#2b2825"
           strokeWidth="4"
-          d="M822 14c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z"
+          d="M822 51V17c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36"
           fill="none"
         />
         <text
           x="947"
-          y="38"
-          fontSize="32"
+          y="41"
+          fontSize="24"
           fontWeight="bold"
           fill="#2B2825"
           textAnchor="middle"
