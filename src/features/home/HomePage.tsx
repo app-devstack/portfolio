@@ -1,5 +1,7 @@
 'use client';
 
+import HeroTitle from '@/assets/hero-title';
+import HeroTitleBg from '@/assets/hero-title-bg';
 import FolderObject from '@/features/home/components/folderObject';
 
 export default function HomePage() {
@@ -14,7 +16,10 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="flex h-screen items-center justify-center">
+    <div className="relative flex h-screen items-center justify-center">
+      <HeroTitle className="absolute top-1/2 left-1/2 z-99 -translate-x-1/2 -translate-y-1/2 transform" />
+      <HeroTitleBg className="absolute top-1/2 left-1/2 z-98 -translate-x-1/2 -translate-y-1/2 transform" />
+
       {folders.map((folder) => (
         <FolderObject
           key={folder.name}
