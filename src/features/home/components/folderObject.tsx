@@ -1,6 +1,6 @@
 'use client';
 
-// import { useWindowSize } from '@uidotdev/usehooks';
+import { motion } from 'motion/react';
 
 import { cn } from '@/lib/utils';
 
@@ -12,44 +12,36 @@ type FolderObjectProps = {
     y: number;
     z: number;
   };
+  isResponsive?: boolean;
 };
 
 export default function FolderObject({
   folderName = 'public',
   handleFolderClick,
   position,
+  isResponsive = false,
 }: FolderObjectProps) {
-  // const { width, height } = useWindowSize();
-
-  // const handleTabClick = () => {
-  //   console.log('Tab clicked');
-  //   alert('publicタブがクリックされました');
-  // };
-
-  // ウィンドウサイズに基づいてスケールを計算
-  // const scale = Math.min((width || 1170) / 1170, (height || 1012) / 1012) * 0.8;
-
   return (
-    <svg
+    <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      // width={1170 * scale}
-      // height={1012 * scale}
       width={1170}
       height={1012}
       fill="none"
       viewBox="0 0 1170 1012"
-      className={cn(
-        'max-h-full max-w-full',
-        'transform transition-transform duration-200 ease-in-out hover:-translate-y-4'
-      )}
-      style={{
-        position: 'absolute',
-        left: position ? `calc(50% + ${position.x}px)` : '50%',
-        top: position ? `calc(50% + ${position.y}px)` : '50%',
-        // transform: `translate(-50%, -50%) scale(${scale})`,
-        transform: `translate(-50%, -50%)`,
-        zIndex: position ? position.z : 1,
-      }}
+      className={cn('max-h-full max-w-full')}
+      style={
+        isResponsive
+          ? undefined
+          : {
+              position: 'absolute',
+              left: position ? `calc(50% + ${position.x}px)` : '50%',
+              top: position ? `calc(50% + ${position.y}px)` : '50%',
+              transform: `translate(-50%, -50%)`,
+              zIndex: position ? position.z : 1,
+            }
+      }
+      whileHover={{ y: -16 }}
+      transition={{ duration: 0.2, ease: 'easeInOut' }}
     >
       {/* フォルダ本体 */}
       <path
@@ -86,6 +78,6 @@ export default function FolderObject({
           {folderName}
         </text>
       </g>
-    </svg>
+    </motion.svg>
   );
 }
