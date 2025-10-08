@@ -49,7 +49,12 @@ export default function HomePage() {
 
       {/* フォルダ表示エリア */}
       <motion.div
-        className={cn('grid max-w-6xl gap-8 px-8', isMobile ? 'grid-cols-2' : 'grid-cols-3')}
+        className={cn(
+          'grid gap-4 px-4',
+          isMobile
+            ? 'max-h-[80vh] max-w-md auto-rows-fr grid-cols-2'
+            : 'max-w-6xl grid-cols-3 gap-8 px-8'
+        )}
         initial="hidden"
         animate="visible"
         variants={{
@@ -64,8 +69,9 @@ export default function HomePage() {
         {FOLDERS.map((folder) => (
           <motion.div
             key={folder.name}
+            className="flex h-full w-full items-center justify-center"
             variants={{
-              hidden: { opacity: 0, y: isMobile ? 0 : 30 },
+              hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
             }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -73,8 +79,6 @@ export default function HomePage() {
             <FolderObject
               folderName={folder.name}
               handleFolderClick={() => handleFolderClick(folder.name)}
-              position={isMobile ? folder.position : undefined}
-              // isResponsive={!isMobile}
               isResponsive
             />
           </motion.div>
