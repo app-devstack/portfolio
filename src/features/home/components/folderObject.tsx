@@ -1,6 +1,6 @@
 'use client';
 
-import { useWindowSize } from '@uidotdev/usehooks';
+// import { useWindowSize } from '@uidotdev/usehooks';
 
 import { cn } from '@/lib/utils';
 
@@ -19,7 +19,7 @@ export default function FolderObject({
   handleFolderClick,
   position,
 }: FolderObjectProps) {
-  const { width, height } = useWindowSize();
+  // const { width, height } = useWindowSize();
 
   // const handleTabClick = () => {
   //   console.log('Tab clicked');
@@ -27,7 +27,7 @@ export default function FolderObject({
   // };
 
   // ウィンドウサイズに基づいてスケールを計算
-  const scale = Math.min((width || 1170) / 1170, (height || 1012) / 1012) * 0.8;
+  // const scale = Math.min((width || 1170) / 1170, (height || 1012) / 1012) * 0.8;
 
   return (
     <svg
@@ -46,7 +46,8 @@ export default function FolderObject({
         position: 'absolute',
         left: position ? `calc(50% + ${position.x}px)` : '50%',
         top: position ? `calc(50% + ${position.y}px)` : '50%',
-        transform: `translate(-50%, -50%) scale(${scale})`,
+        // transform: `translate(-50%, -50%) scale(${scale})`,
+        transform: `translate(-50%, -50%)`,
         zIndex: position ? position.z : 1,
       }}
     >
