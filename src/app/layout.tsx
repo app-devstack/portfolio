@@ -1,18 +1,22 @@
 import './globals.css';
 
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Montserrat_Alternates, Noto_Sans_JP } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// Noto Sans JP
+const notoSansJp = Noto_Sans_JP({
+  variable: '--font-noto-sans-jp',
   subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+// Montserrat Alternates
+const montserratAlternates = Montserrat_Alternates({
+  variable: '--font-montserrat-alternates',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -29,8 +33,10 @@ export default function RootLayout({
     <html lang="ja">
       <body
         className={cn(
-          geistSans.variable,
-          geistMono.variable,
+          notoSansJp.className,
+          montserratAlternates.className,
+          // notoSansJp.variable,
+          // montserratAlternates.variable,
           'h-screen w-screen overflow-hidden antialiased'
         )}
       >
