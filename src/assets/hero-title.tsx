@@ -1,12 +1,19 @@
-export default function HeroTitle({ className }: { className?: string }) {
+type HeroTitleProps = {
+  className?: string;
+  width?: number | string;
+  height?: number | string;
+};
+
+export default function HeroTitle({ className, width, height }: HeroTitleProps) {
   return (
     <div className={className}>
       <svg
-        width="402"
-        height="101"
+        width={width || '100%'}
+        height={height || '100%'}
         viewBox="0 0 402 101"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid meet"
       >
         <path
           d="M401.658 9.3999V98.9999H381.562V88.1199C375.418 96.3972 366.372 100.536 354.426 100.536C343.844 100.536 335.567 97.2079 329.594 90.5519C323.706 83.8106 320.762 74.2532 320.762 61.8799V9.3999H341.498V61.2399C341.498 68.4079 343.162 73.8266 346.49 77.4959C349.903 81.0799 354.511 82.8719 360.314 82.8719C366.543 82.8719 371.535 80.9519 375.29 77.1119C379.044 73.1866 380.922 67.4266 380.922 59.8319V9.3999H401.658Z"
