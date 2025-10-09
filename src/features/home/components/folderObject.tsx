@@ -24,10 +24,10 @@ export default function FolderObject({
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      width={1170}
-      height={1012}
+      width={1208}
+      height={848}
       fill="none"
-      viewBox="0 0 1170 1012"
+      viewBox="0 0 1208 848"
       className={cn('max-h-full max-w-full')}
       style={
         isResponsive
@@ -43,37 +43,52 @@ export default function FolderObject({
       whileHover={{ y: -16 }}
       transition={{ duration: 0.2, ease: 'easeInOut' }}
     >
-      {/* フォルダ本体 */}
-      <path
-        fill="#d4c8b8"
-        d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
-        style={{ cursor: 'pointer', pointerEvents: 'auto' }}
-        onClick={handleFolderClick}
-      />
-      <path
-        stroke="#2b2825"
-        strokeWidth="4"
-        d="M2 90c0-22.091 17.909-40 40-40h1086c22.09 0 40 17.909 40 40v880c0 22.091-17.91 40-40 40H42c-22.091 0-40-17.909-40-40z"
-        fill="none"
-      />
-
-      {/* インデックス部分*/}
-      <g onClick={handleFolderClick} style={{ cursor: 'pointer', pointerEvents: 'auto' }}>
-        <path fill="#d4c8b8" d="M822 17c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36H822z" />
-        <path
-          stroke="#2b2825"
+      <g id="file" onClick={handleFolderClick} style={{ cursor: 'pointer' }}>
+        <rect
+          id="file-background"
+          x="2"
+          y="42"
+          width="1204"
+          height="804"
+          rx="42"
+          fill="#D4C8B8"
+          stroke="#2B2825"
           strokeWidth="4"
-          d="M822 51V17c0-6.627 5.373-12 12-12h226c6.63 0 12 5.373 12 12v36"
-          fill="none"
         />
+        <g id="file-tab">
+          <mask
+            id="path-2-outside-1_46_715"
+            maskUnits="userSpaceOnUse"
+            x="870"
+            y="0"
+            width="258"
+            height="54"
+            fill="black"
+          >
+            <rect fill="white" x="870" width="258" height="54" />
+            <path d="M874 16C874 9.37258 879.373 4 886 4H1112C1118.63 4 1124 9.37258 1124 16V54H874V16Z" />
+          </mask>
+          <path
+            d="M874 16C874 9.37258 879.373 4 886 4H1112C1118.63 4 1124 9.37258 1124 16V54H874V16Z"
+            fill="#D4C8B8"
+          />
+          <path
+            d="M870 16C870 7.16344 877.163 0 886 0H1112C1120.84 0 1128 7.16344 1128 16H1120C1120 11.5817 1116.42 8 1112 8H886C881.582 8 878 11.5817 878 16H870ZM1124 54H874H1124ZM870 54V16C870 7.16344 877.163 0 886 0V8C881.582 8 878 11.5817 878 16V54H870ZM1112 0C1120.84 0 1128 7.16344 1128 16V54H1120V16C1120 11.5817 1116.42 8 1112 8V0Z"
+            fill="#2B2825"
+            mask="url(#path-2-outside-1_46_715)"
+            strokeWidth="4"
+          />
+        </g>
+
         <text
-          x="947"
-          y="41"
-          fontSize="24"
-          fontWeight="bold"
-          fill="#2B2825"
+          x="604"
+          y="464"
           textAnchor="middle"
-          style={{ pointerEvents: 'none' }}
+          dominantBaseline="middle"
+          fill="#2B2825"
+          fontSize="80"
+          fontWeight="600"
+          fontFamily="system-ui, -apple-system, sans-serif"
         >
           {folderName}
         </text>
