@@ -1,10 +1,5 @@
-// import HomePage from '@/features/home/HomePage';
-
-// export default function Home() {
-//   return <HomePage />;
-// }
-import DemoPage from '@/features/home/DemoPage';
+import HomePage from '@/features/home/HomePage';
 
 export default function Home() {
-  return <DemoPage />;
+  return <HomePage />;
 }
