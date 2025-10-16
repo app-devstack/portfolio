@@ -9,14 +9,14 @@ import { cn } from '@/lib/utils';
 const notoSansJp = Noto_Sans_JP({
   variable: '--font-noto-sans-jp',
   subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
+  weight: ['100', '300', '400', '500', '600', '700', '900'],
 });
 
 // Montserrat Alternates
 const montserratAlternates = Montserrat_Alternates({
   variable: '--font-montserrat-alternates',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['100', '300', '400', '500', '600', '700', '900'],
 });
 
 export const metadata: Metadata = {
