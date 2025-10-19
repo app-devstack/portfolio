@@ -22,7 +22,7 @@ const FigureGroup = () => {
 
   return (
     <group ref={groupRef}>
-      <Figure position={[0, 0, 0]} />
+      <Figure position={[0, -1, 0.5]} />
     </group>
   );
 };

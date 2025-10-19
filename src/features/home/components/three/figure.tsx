@@ -7,7 +7,7 @@ interface FigureProps {
 }
 
 export default function Figure({ position = [0, 0, 0] }: FigureProps) {
-  const gltf = useGLTF('/models/Chikawa.glb');
+  const gltf = useGLTF('/models/ice_cream_ghost.glb');
 
   return (
     <group position={position}>
