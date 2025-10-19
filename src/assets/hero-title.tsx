@@ -1,5 +1,7 @@
 import { motion } from 'motion/react';
 
+import { cn } from '@/lib/utils';
+
 type HeroTitleProps = {
   className?: string;
   width?: number | string;
@@ -8,7 +10,7 @@ type HeroTitleProps = {
 
 export default function HeroTitle({ className, width, height }: HeroTitleProps) {
   return (
-    <div className={className}>
+    <div className={cn('hero-title-draggable', className)}>
       <motion.svg
         width={width || '100%'}
         height={height || '100%'}
