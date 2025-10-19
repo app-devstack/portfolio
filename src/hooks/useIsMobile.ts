@@ -2,26 +2,29 @@
 
 import { useEffect, useState } from 'react';
 
-const MBILE_BREAKPOINT = 768; // px
+const SP_BREAKPOINT = 768; // px
 
-export function useIsMobile(breakpoint: number = MBILE_BREAKPOINT): boolean {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
+export function useIsMobile(breakpoint: number = SP_BREAKPOINT): boolean {
+  // 初期値をundefinedにして、クライアントサイドで初めて判定するようにする
+  const [isMobile, setIsMobile] = useState<boolean | undefined>(undefined);
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < breakpoint);
+    const mediaQuery = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
+
+    const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      setIsMobile(e.matches);
     };
 
     // 初期チェック
-    checkIsMobile();
+    handleChange(mediaQuery);
 
-    // リサイズイベントリスナー
-    window.addEventListener('resize', checkIsMobile);
+    // matchMediaのリスナーを設定
+    mediaQuery.addEventListener('change', handleChange);
 
     return () => {
-      window.removeEventListener('resize', checkIsMobile);
+      mediaQuery.removeEventListener('change', handleChange);
     };
   }, [breakpoint]);
 
-  return isMobile;
+  return isMobile ?? false;
 }
