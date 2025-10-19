@@ -1,20 +1,26 @@
 'use client';
 
-import { OrbitControls, Text } from '@react-three/drei';
+import { Html, OrbitControls } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import * as THREE from 'three';
 
+import { Spinner } from '@/components/ui/spinner';
+
 import Figure from './figure';
 
 const Loading = () => {
-  return <Text>Loading...</Text>;
+  return (
+    <Html center>
+      <Spinner className="text-muted-foreground/50 size-10" />
+    </Html>
+  );
 };
 
 const FigureGroup = () => {
   const groupRef = useRef<THREE.Group>(null);
 
-  useFrame((state, delta) => {
+  useFrame((_state, delta) => {
     if (groupRef.current) {
       groupRef.current.rotation.y += delta * 0.5;
     }
