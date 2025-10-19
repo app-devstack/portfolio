@@ -22,9 +22,7 @@ const FigureGroup = () => {
 
   return (
     <group ref={groupRef}>
-      <Figure position={[0, 0, 1]} />
-      <Figure position={[-0.4, -0.6, 2]} />
-      <Figure position={[0.4, 0.6, 0]} />
+      <Figure position={[0, -1, 0.5]} />
     </group>
   );
 };
@@ -41,7 +39,7 @@ const Scene = () => (
 
 export default function CustomCanvas() {
   return (
-    <Canvas camera={{ position: [0, 0, 20] }}>
+    <Canvas camera={{ position: [0, 0, 5] }}>
       <Suspense fallback={<Loading />}>
         <Scene />
       </Suspense>
