@@ -11,7 +11,7 @@ export default function MarqueeTitle() {
   // 定数の定義
   const TITLE_WIDTH = isMobile ? 200 : 400;
   const TITLE_HEIGHT = isMobile ? 50 : 100;
-  const TITLE_GAP = isMobile ? 200 : 200;
+  const TITLE_GAP = isMobile ? 200 : 400;
   const TITLE_COUNT = 4;
   const ANIMATION_DURATION = 40;
 
@@ -33,7 +33,7 @@ export default function MarqueeTitle() {
         },
       }}
     >
-      {Array.from({ length: TITLE_COUNT * 2 }).map((_, index) => (
+      {Array.from({ length: TITLE_COUNT * 5 }).map((_, index) => (
         <motion.div
           key={index}
           drag
