@@ -55,7 +55,7 @@ export function SortableItem({ item, isDragging }: SortableItemProps) {
         )}
       >
         <FolderIcon className="h-full w-full stroke-1 text-amber-600" />
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-semibold md:text-base lg:text-xl">
+        <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-sm font-semibold md:text-base lg:text-xl">
           {folder.name}
         </span>
       </DraggableItem>
