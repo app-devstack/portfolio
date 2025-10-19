@@ -37,7 +37,7 @@ export default function RootLayout({
           montserratAlternates.className,
           // notoSansJp.variable,
           // montserratAlternates.variable,
-          'h-screen w-screen overflow-hidden antialiased'
+          'h-screen max-h-dvh w-screen overflow-x-hidden overflow-y-auto overscroll-none antialiased'
         )}
       >
         {children}
