@@ -23,11 +23,9 @@ export default function HomePage() {
       <div className="h-[100vh]" />
 
       {/* メイン */}
-      <div className="grid grid-cols-1 justify-items-center overflow-x-hidden overflow-y-visible">
+      <div className="overflow-x-hidden overflow-y-visible">
         {/* メインコンテンツ */}
-        <div className="col-start-1 row-start-2 grid justify-center gap-16 px-12 py-32">
-          <HomeMainContents />
-        </div>
+        <HomeMainContents />
       </div>
     </div>
   );
