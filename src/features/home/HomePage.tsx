@@ -15,11 +15,15 @@ export default function HomePage() {
         <CustomCanvas />
       </div>
 
-      {/* メイン */}
-      <div className="grid grid-cols-1 justify-items-center">
+      <div className="fixed z-0 overflow-x-hidden overflow-y-visible">
         {/* マーキー */}
         <MarqueeContents />
+      </div>
 
+      <div className="h-[100vh]" />
+
+      {/* メイン */}
+      <div className="grid grid-cols-1 justify-items-center overflow-x-hidden overflow-y-visible">
         {/* メインコンテンツ */}
         <div className="col-start-1 row-start-2 grid justify-center gap-16 px-12 py-32">
           <HomeMainContents />
