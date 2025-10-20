@@ -1,5 +1,6 @@
 'use client';
 
+import { useClickAway } from '@uidotdev/usehooks';
 import { AnimatePresence, motion, MotionNodeOptions } from 'motion/react';
 import { useState } from 'react';
 
@@ -13,8 +14,12 @@ export default function Header() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
+  const ref = useClickAway<HTMLElement>(() => {
+    setIsOpen(false);
+  });
+
   return (
-    <header className="fixed top-8 right-8 z-50">
+    <header ref={ref} className="fixed top-8 right-8 z-50">
       {/* ハンバーガーボタン */}
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
 
