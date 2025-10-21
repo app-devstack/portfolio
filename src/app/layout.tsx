@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat_Alternates, Noto_Sans_JP } from 'next/font/google';
 
+import Lenis from '@/components/lenis';
 import { cn } from '@/lib/utils';
 
 // Noto Sans JP
@@ -40,6 +41,7 @@ export default function RootLayout({
           'h-screen max-h-dvh w-screen overflow-x-hidden overflow-y-auto overscroll-none antialiased'
         )}
       >
+        <Lenis />
         {children}
       </body>
     </html>
