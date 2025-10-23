@@ -1,13 +1,5 @@
-import { Noto_Sans_JP } from 'next/font/google';
-
+import { notoSansJp } from '@/assets/font';
 import { cn } from '@/lib/utils';
-
-// Noto Sans JP
-const notoSansJp = Noto_Sans_JP({
-  variable: '--font-noto-sans-jp',
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '600', '700', '900'],
-});
 
 /**
  * ホームに表示するセクションコンテンツ
