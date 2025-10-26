@@ -8,11 +8,7 @@ export default function HomeMainContents() {
   return (
     <div className="grid justify-center gap-16 px-4 py-32 md:px-12">
       {DEMO_SECTIONS.map((section) => (
-        <SectionWrapper
-          key={section.id}
-          title={section.title}
-          contents={<p className="">{section.content}</p>}
-        />
+        <SectionWrapper key={section.id} title={section.title} contents={<>{section.content}</>} />
       ))}
     </div>
   );
