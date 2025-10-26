@@ -6,7 +6,7 @@ export default function HomeThreeCanvas() {
   return (
     <Scene>
       <PortFolioModel position={[0, -1, 0.5]} baseColor="wheat" />
-      <IceCreamGhostModel position={[0, -2, 0.5]} />
+      <IceCreamGhostModel position={[0, -2, -0.5]} />
     </Scene>
   );
 }

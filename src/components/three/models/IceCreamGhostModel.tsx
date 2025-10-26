@@ -14,9 +14,12 @@ interface FigureProps {
 
 useGLTF.preload(MODEL_PATHS.iceCreamGhost);
 
-export default function IceCreamGhostModel({ position, baseColor: _ }: FigureProps) {
+export default function IceCreamGhostModel({
+  position = [0, -2.5, -0.5],
+  baseColor: _,
+}: FigureProps) {
   const ROTATION_SPEED = 0.5;
-  const INITIAL_POSITION: Position = [0, -2.5, -0.5];
+  const INITIAL_POSITION: Position = position;
   const MAX_POSITION: Position = [0, -1, 0.5];
   const POSITION_SCROLL_SENSITIVITY = 0.002; // 位置のスクロール感度
 
