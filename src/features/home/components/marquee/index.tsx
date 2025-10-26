@@ -24,9 +24,10 @@ export default function MarqueeContents() {
         <motion.div
           className="w-max"
           animate={{
-            y: hasScrolled ? SCROLL_ANIMATION.targetY : '0vh',
-            x: hasScrolled ? '-30%' : undefined,
-            scale: hasScrolled ? SCROLL_ANIMATION.targetScale : 1,
+            y: SCROLL_ANIMATION.targetY,
+            // x: hasScrolled ? '-30%' : undefined,
+            x: '-30%',
+            scale: hasScrolled ? SCROLL_ANIMATION.targetScale : 0.7,
           }}
           transition={SCROLL_ANIMATION.transition}
         >
