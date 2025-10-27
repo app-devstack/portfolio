@@ -19,5 +19,5 @@ export const MODEL_PATHS = {
     : '/models/portfolio.glb',
   iceCreamGhost: IS_PRODUCTION
     ? `${ASSETS_DOMAIN}/assets/models/ice_cream_ghost.glb`
-    : `/models/ice_cream_ghost.glb`,
+    : `/models/ice_ghost.glb`,
 };
