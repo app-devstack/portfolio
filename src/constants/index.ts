@@ -14,10 +14,6 @@ export const ASSETS_DOMAIN = process.env.ASSETS_DOMAIN_NAME
  * 3Dモデルのパス
  */
 export const MODEL_PATHS = {
-  portfolio: IS_PRODUCTION
-    ? `${ASSETS_DOMAIN}/assets/models/portfolio.glb`
-    : '/models/portfolio.glb',
-  iceCreamGhost: IS_PRODUCTION
-    ? `${ASSETS_DOMAIN}/assets/models/ice_cream_ghost.glb`
-    : `/models/ice_ghost.glb`,
+  portfolio: '/models/portfolio.glb',
+  iceCreamGhost: '/models/ice_ghost.glb',
 };
