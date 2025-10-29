@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 import { montserratAlternates, notoSansJp } from '@/assets/font';
 import Lenis from '@/components/lenis';
+import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
       >
         <Lenis />
         {children}
+        <Toaster theme="light" richColors />
       </body>
     </html>
   );
