@@ -2,6 +2,7 @@
 
 import { useScroll } from 'motion/react';
 
+import Footer from '@/components/elements/footer';
 import Header from '@/components/elements/header';
 import { AnimationStateProvider } from '@/contexts/AnimationStateContext';
 import { ScrollProvider } from '@/contexts/ScrollContext';
@@ -36,6 +37,9 @@ export default function HomePage() {
           {/* メインコンテンツ */}
           <HomeMainContents />
         </div>
+
+        {/* フッター */}
+        <Footer />
       </div>
     </AnimationStateProvider>
   );
