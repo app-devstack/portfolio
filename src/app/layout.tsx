@@ -1,11 +1,20 @@
 import './globals.css';
 
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 
 import { montserratAlternates, notoSansJp } from '@/assets/font';
 import Lenis from '@/components/lenis';
 import { Toaster } from '@/components/ui/sonner';
 import { cn } from '@/lib/utils';
+
+export const viewport: Viewport = {
+  themeColor: '#FFFFFF',
+  minimumScale: 1,
+  initialScale: 1,
+  width: 'device-width',
+  userScalable: false,
+  viewportFit: 'cover',
+};
 
 export const metadata: Metadata = {
   title: 'maru-maruuu_portfolio',
