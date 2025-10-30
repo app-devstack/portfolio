@@ -49,11 +49,11 @@
     0%,
     90%,
     100% {
-    background-position: calc(-100% - var(--shiny-width)) 0;
+      background-position: calc(-100% - var(--shiny-width)) 0;
     }
     30%,
     60% {
-    background-position: calc(100% + var(--shiny-width)) 0;
+      background-position: calc(100% + var(--shiny-width)) 0;
     }
   }
 }
@@ -175,7 +175,7 @@
     pointer-events: none;
     z-index: -9999;
     animation: slowRotate 500s linear infinite;
-    opacity: 0.5;
+    opacity: 0.3;
   }
 
   @keyframes slowRotate {
