@@ -79,13 +79,13 @@ const getImageStyles = (aspectRatio: ImageAspect) => {
   switch (aspectRatio) {
     case 'portrait': // 縦長
       return {
-        height: `${Math.round(baseHeight * goldenRatio)}px`, // 約485px
+        height: `${Math.round(baseHeight * goldenRatio)}px`,
         width: 'w-full md:w-[300px]',
       };
     case 'landscape': // 横長
       return {
-        height: `${Math.round(baseHeight / goldenRatio)}px`, // 約185px
-        width: 'w-full md:w-[500px]',
+        height: `${Math.round(baseHeight / goldenRatio)}px`,
+        width: 'w-full md:w-[300px]',
       };
     case 'square': // 正方形
       return {
