@@ -1,7 +1,8 @@
 import dedent from 'dedent';
-import Markdown from 'marked-react';
 import Image from 'next/image';
 
+import CustomMarkdown from '@/components/CustomMarkdown';
+import Heading from '@/components/ui/heading';
 import { cn } from '@/lib/utils';
 
 import { designWorks, developWorks, ImageAspect } from './_works_document';
@@ -21,24 +22,23 @@ export default function HomeContentsWorks() {
   ];
 
   return (
-    <div className="grid gap-8">
+    <div className="grid gap-28">
       {works.map((category) => (
         <div key={category.id} className="grid gap-6">
-          <h3 className="text-lg font-semibold md:text-4xl">## {category.title}</h3>
-          <ul className="grid content-center gap-10">
+          <Heading level="h3">{category.title}</Heading>
+          <ul className="grid content-center gap-20">
             {category.items.map((work) => {
               const imageStyles = getImageStyles(work.aspectRatio);
 
               return (
                 <li key={work.id} className="grid gap-4">
-                  <h4 className="text-base font-semibold md:text-2xl">### {work.title}</h4>
+                  <Heading level="h4">{work.title}</Heading>
+
                   <div className="flex flex-col gap-4 md:flex-row">
                     {/* 詳細セクション（Markdown） */}
-                    <div className="ml-2 flex-1 leading-7 md:text-base [&_p]:mb-4">
-                      <Markdown gfm breaks>
-                        {dedent(work.description)}
-                      </Markdown>
-                    </div>
+                    <CustomMarkdown className="ml-0 flex-1 md:ml-2">
+                      {dedent(work.description)}
+                    </CustomMarkdown>
 
                     {/* 画像セクション（黄金比に基づいた高さ固定・スクロール可能） */}
                     <div
