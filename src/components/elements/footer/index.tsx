@@ -25,15 +25,22 @@ export default function Footer() {
     },
   ];
   return (
-    <div className={cn('relative min-h-[300px] overflow-hidden')}>
+    <div className={cn('relative min-h-[280px] overflow-visible')}>
       <div className="relative z-10 flex flex-col items-center justify-between gap-8 p-8 md:p-12">
         <div className="flex w-full max-w-6xl items-start justify-between">
-          {/* ロゴ */}
-          <div className="flex flex-col gap-2">
-            <div className="relative h-12 w-12">
-              <Image src={'/maruuu_logo.svg'} fill alt={'site logo'} />
+          <div className="relative">
+            {/* メッセージバブル */}
+            <div className="pointer-events-none absolute -top-10 left-5 size-40 -translate-y-1/2">
+              <Image src={'/images/message_bubble.svg'} fill alt={'message bubble'} />
             </div>
-            <p className="text-foreground text-sm font-semibold">maru-maruuu</p>
+
+            {/* ロゴ */}
+            <div className="relative flex flex-col gap-2">
+              <div className="relative h-12 w-12">
+                <Image src={'/maruuu_logo.svg'} fill alt={'site logo'} />
+              </div>
+              <p className="text-foreground text-sm font-semibold">maru-maruuu</p>
+            </div>
           </div>
 
           {/* SNSアイコン */}
