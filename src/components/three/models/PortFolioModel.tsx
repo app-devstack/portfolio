@@ -17,13 +17,21 @@ interface FigureProps {
   position?: Position;
   baseColor?: string;
   maxScroll?: number;
+  scale?: number;
+  maxPosition?: Position;
 }
 
 useGLTF.preload(MODEL_PATHS.portfolio);
 
-export default function PortFolioModel({ position, baseColor, maxScroll = 1000 }: FigureProps) {
-  const INITIAL_POSITION: Position = [0, -2.5, -0.5];
-  const MAX_POSITION: Position = [0, -1, 8];
+export default function PortFolioModel({
+  position,
+  baseColor,
+  maxScroll = 1000,
+  scale = 1,
+  maxPosition,
+}: FigureProps) {
+  const INITIAL_POSITION: Position = position || [0, -2.5, -0.5];
+  const MAX_POSITION: Position = maxPosition || [0, -1, 8];
   const POSITION_SCROLL_SENSITIVITY = 0.002; // スクロール感度
 
   // const path = `${ASSETS_DOMAIN}/assets/models/ice_cream_ghost.glb`;
@@ -57,13 +65,13 @@ export default function PortFolioModel({ position, baseColor, maxScroll = 1000 }
   useThreePosition({
     scrollY,
     threeRef: groupRef,
-    initialPosition: position || INITIAL_POSITION,
+    initialPosition: INITIAL_POSITION,
     maxPosition: MAX_POSITION,
     scrollSensitivity: POSITION_SCROLL_SENSITIVITY,
   });
 
   return (
-    <group ref={groupRef} position={position}>
+    <group ref={groupRef} scale={scale}>
       <primitive object={gltf.scene} />
     </group>
   );
