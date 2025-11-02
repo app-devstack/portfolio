@@ -1,5 +1,6 @@
-import { FileTextIcon, GithubIcon, TwitterIcon } from 'lucide-react';
+import { ExternalLinkIcon, FileTextIcon, GithubIcon, TwitterIcon } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { cn } from '@/lib/utils';
 
@@ -25,12 +26,12 @@ export default function Footer() {
     },
   ];
   return (
-    <div className={cn('relative min-h-[280px] overflow-visible')}>
+    <div className={cn('relative min-h-[280px] overflow-visible md:min-h-[320px]')}>
       <div className="relative z-10 flex flex-col items-center justify-between gap-8 p-8 md:p-12">
         <div className="flex w-full max-w-6xl items-start justify-between">
           <div className="relative">
             {/* メッセージバブル */}
-            <div className="pointer-events-none absolute -top-10 left-5 size-40 -translate-y-1/2">
+            <div className="pointer-events-none absolute -top-10 left-5 size-36 -translate-y-1/2 md:size-40">
               <Image src={'/images/message_bubble.svg'} fill alt={'message bubble'} />
             </div>
 
@@ -44,21 +45,22 @@ export default function Footer() {
           </div>
 
           {/* SNSアイコン */}
-          <div className="flex items-center gap-2">
-            {socialLinks.map(({ name, href, label, Icon }) => (
-              <a
+          <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-8">
+            {socialLinks.map(({ name, href, label }) => (
+              <Link
                 key={name}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cn(
-                  'text-muted-foreground grid aspect-square min-w-16 place-items-center opacity-80 transition-opacity hover:opacity-70'
+                  'text-muted-foreground grid min-w-16 place-items-center opacity-80 transition-opacity hover:opacity-70',
+                  'inline-flex items-center gap-1'
                 )}
                 aria-label={label}
               >
-                <Icon size={32} />
-                <span className="text-xs">{name}</span>
-              </a>
+                <span className="flex-1 text-xl font-black">{name}</span>
+                <ExternalLinkIcon size={18} />
+              </Link>
             ))}
           </div>
         </div>

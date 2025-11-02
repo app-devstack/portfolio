@@ -39,17 +39,7 @@ export default function HomePage() {
           <HomeMainContents />
         </div>
 
-        <div className={cn('z-10 overflow-x-hidden overflow-y-visible')}>
-          <div
-            className={cn(
-              'h-[80vh] px-12 py-32',
-              'text-foreground text-xl/12 font-bold tracking-wide md:text-3xl/24'
-            )}
-          >
-            <p>Thankyou for visiting my portfolio site!</p>
-            <p>mite kurete arigato~!!</p>
-          </div>
-        </div>
+        <div className={cn('h-[80vh]')} />
 
         {/* フッター */}
         <Footer />
