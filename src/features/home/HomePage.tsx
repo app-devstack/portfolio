@@ -17,6 +17,8 @@ export default function HomePage() {
   return (
     <AnimationStateProvider>
       <div className="relative min-h-screen">
+        <div id={`home`} />
+
         <Header />
 
         {/* 背景キャンバス */}

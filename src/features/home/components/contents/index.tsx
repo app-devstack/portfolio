@@ -36,6 +36,7 @@ export default function HomeMainContents() {
       {SECTIONS.map((section) => (
         <section
           key={section.id}
+          id={section.id}
           className={cn(
             'mx-auto min-h-screen w-full max-w-7xl rounded-2xl border bg-white/50 p-6 backdrop-blur-xs md:p-10',
             'flex flex-col gap-6 md:gap-10'

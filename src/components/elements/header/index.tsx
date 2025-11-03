@@ -10,7 +10,7 @@ import MenuButton from './parts/menuButton';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ['home', 'profile', 'works', 'contact'];
+  const navItems = ['home', 'works', 'profile'];
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
@@ -30,14 +30,14 @@ export default function Header() {
             className={cn(
               'absolute top-16 right-0 flex flex-col gap-2',
               'rounded-2xl p-6',
-              'border-primary-text/20 bg- border-2 backdrop-blur-md'
+              'border-primary-text/20 border-2 bg-white/50 backdrop-blur-md'
             )}
             {...navAnimation}
           >
             {navItems.map((item, idx) => (
               <motion.a
                 key={item}
-                href={`#${item}`}
+                href={`/#${item}`}
                 onClick={closeMenu}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
