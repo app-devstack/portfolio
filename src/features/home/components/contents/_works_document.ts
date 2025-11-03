@@ -133,26 +133,7 @@ export const developWorks = [
   {
     id: 'portfolio',
     category: 'Web Site',
-    images: [
-      {
-        url: '/images/works/portfolio/logo.png',
-        alt: 'ポートフォリオ - ロゴ',
-        aspectRatio: 'landscape',
-        description: ``,
-      },
-      {
-        url: '/images/works/portfolio/not_found.png',
-        alt: 'ポートフォリオ - 404ページ',
-        aspectRatio: 'landscape',
-        description: ``,
-      },
-      {
-        url: '/images/works/portfolio/prev_portforio.png',
-        alt: 'ポートフォリオ - 前バージョン',
-        aspectRatio: 'landscape',
-        description: ``,
-      },
-    ],
+
     title: 'このポートフォリオ',
     description: `
 		3つめはこのポートフォリオです！
@@ -161,8 +142,57 @@ export const developWorks = [
 		セキュリティにも強く、分散配置されたサーバー(エッジサーバー)が利用できるところ。
 		その利用が簡単だし、D1やKV、ストレージのR2といった便利な機能が豊富に揃っているので、積極的に活用しています！
 
+		ファーストビューの「Portfolio」の文字は、Nomad Sculptで作成しBlenderでアニメーションさせています！
+		文字を1つずつ動かすのに苦労しましたが、バウンドと合わせて回転したり、縮尺が変わったりと微調整し、かなり動きにこだわりました！
+		その甲斐あって、印象的かつ、なんのサイトか一目で伝えられるようになったと思います！
 
+		後ろで回転しているアイスクリームもNomad Sculptで作成しました！
+		アイスクリーム事態に、かなり思い入れがあり、3Dで表現するなら絶対に入れたいと思っていました。
+		このサイトの下部にはアイスを眺めるためだけに作ったセクション(アイスがよく見えるようにした場所)もあります！
+		ぜひぼ～っと眺めていただけると嬉しいです！(もう少しBGMの勉強をしたら、作曲して本当にただ眺めるだけのセクションにしたいです！)
+
+		また、3D作品をのせるに至った経緯ですが、応募先企業様のこれまでの実績や自社サイトに、印象的でステキな3D(Three.js)を使用したものがたくさんあり、
+		急遽それらを入れての制作に挑戦しました！
     `,
+    images: [
+      {
+        url: '/images/works/portfolio/logo.png',
+        alt: 'ポートフォリオ - ロゴ',
+        aspectRatio: 'landscape',
+        description: `
+				ポートフォリオのロゴです！
+				Illustratorを使用して作成しました！
+				ロゴ制作も、Illustratorもまだまだ初心者なので、どんどん上達していきたいです！
+				`,
+      },
+      {
+        url: '/images/works/portfolio/not_found.png',
+        alt: 'ポートフォリオ - 404ページ',
+        aspectRatio: 'landscape',
+        description: `
+				ポートフォリオの404ページです！
+				(なかなか実際に見ていただける機会はな少ないかもしれませんが...笑)
+
+				Nomad Sculptで文字を作成し、Blender調整したものを表示しています！
+				なんとも言えない、ちょっと悲壮感も感じるお目々が気に入っています！
+				`,
+      },
+      {
+        url: '/images/works/portfolio/prev_portforio.png',
+        alt: 'ポートフォリオ - 前バージョン',
+        aspectRatio: 'portrait',
+        description: `
+				今回のポートフォリが完成するまでに、実は3回ほど大きくデザインを変えています。
+				案1は手を動かそうと言う程度で、有名な方のとってもいいな！と思ったポートフォリオをトレースさせていただきました。
+				案2は元来のポートフォリオとは何だ？というところからフォルダに格納した自分の作品を見てもらうというイメージで作成しました。
+				デザインは好きだけど、今ひとつ爆発が足りない。自分を出し切れていないと思い別案を考えました。
+				案3は自分を知ってもらいたい！と言う思いから自分の好きなものを考え、お家が好き無印みたいな落ち着いていて、
+				かつ、ちょっとノスタルジックな雰囲気のお部屋をイメージして作成しました。
+
+				最終的には、今ご覧いただいている案4で自分の全力を詰め込んだ愉快なサイトを作ることができました！
+				`,
+      },
+    ],
   },
   {
     id: 'other',
