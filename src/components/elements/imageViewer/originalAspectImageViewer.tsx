@@ -1,9 +1,12 @@
 import dedent from 'dedent';
 import Image from 'next/image';
 
+import { notoSansJp } from '@/assets/font';
+import CustomMarkdown from '@/components/CustomMarkdown';
 import { IMAGE_BG_COLOR } from '@/components/elements/imageViewer/_constants';
 import { ContentImageProps } from '@/components/elements/imageViewer/_types';
 import { useIsMobile } from '@/hooks/useIsMobile';
+import { cn } from '@/lib/utils';
 
 type OriginalAspectImageViewProps = {
   images: ContentImageProps[];
@@ -14,26 +17,6 @@ type OriginalAspectImageViewProps = {
  */
 export default function OriginalAspectImageViewer({ images }: OriginalAspectImageViewProps) {
   const isMobile = useIsMobile();
-
-  const isSingleImage = images.length === 1;
-
-  if (isSingleImage) {
-    const image = images[0];
-    return (
-      <div className="flex w-full items-center justify-center p-4 sm:p-6">
-        <div className="relative max-h-[calc(45vh-1rem)] max-w-full sm:max-h-[calc(40vh-1.5rem)] md:max-h-[calc(40vh-1.5rem)]">
-          <Image
-            src={image.url}
-            alt={image.alt}
-            width={1200}
-            height={1200}
-            className="h-auto w-auto max-w-full object-contain"
-            priority
-          />
-        </div>
-      </div>
-    );
-  }
 
   // 複数画像時のレイアウト（スクロール対応）
   const imageHeight = isMobile ? 300 : 450;
@@ -61,9 +44,12 @@ export default function OriginalAspectImageViewer({ images }: OriginalAspectImag
               />
             </div>
             {image.description && (
-              <p className="text-muted-foreground py-2" style={{ width: `${imageWidth}px` }}>
-                {dedent(image.description)}
-              </p>
+              <div
+                className={cn('text-muted-foreground py-2', notoSansJp.className)}
+                style={{ width: `${imageWidth}px` }}
+              >
+                <CustomMarkdown>{dedent(image.description)}</CustomMarkdown>
+              </div>
             )}
           </div>
         ))}
