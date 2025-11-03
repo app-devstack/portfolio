@@ -38,14 +38,30 @@ export default function HomeContentsProfile() {
 
   // どんな人？
   const person = `
-	すみません？まだ続きます(読んでいただいてありがとうございます)
+	まだ続きます！(読んでいただいてありがとうございます)
 	ここまで拝読いただいていたら、だいたいの人となりは伝わってそうですね。
 
-	作るの大好き、甘いの大好きな普通の人です！
-	
+	「作るの大好き、甘いの大好きな人です！」
 
+	最近やったMBTI診断ではENFP型(運動家)でした！
+	「クリエイティブかつ自由奔放で、社交的です。([引用](https://www.16personalities.com/enfp-personality))」と記載されていて、だいたい合ってる気がします！
 
+	【経歴まとめ】
+  ① アイス屋さんで店長を経験(3年弱)
+	② 老舗の喫茶店で副店長(短期間)
+	③ 車体製造の工場でマシンの制御プログラム作成(ツール使用)
+	④ IT企業でフルスタックエンジニア(現在)
 
+	飲食店関連のお仕事は、どうしても長時間労働になりがちでしたが、接客や従業員の管理を通じて人と接する部分をたくさん学びました！
+	エンジニアとしては、まだまだ未熟ですが、持ち前の探究心・好奇心で日々成長中です！
+
+	`;
+
+  // これから何をしたいのか？
+  const future = `
+	これからも、たくさんエンジニアリングスキル・デザインスキルを磨いていきたいと思っています！
+	また、WEB関連・デザイン関連・3D・アニメーション・イラストなどのスキルを広く深く学んで、
+	もっと自由で独創的な表現をたくさん作り、クリエイティブな活動を続けていきたいと思っています！
 	`;
 
   return (
@@ -63,6 +79,11 @@ export default function HomeContentsProfile() {
       <div className="grid gap-6">
         <Heading level="h3">どんな人？</Heading>
         <CustomMarkdown className="ml-0 flex-1">{dedent(person)}</CustomMarkdown>
+      </div>
+
+      <div className="grid gap-6">
+        <Heading level="h3">これから何をしたいのか？</Heading>
+        <CustomMarkdown className="ml-0 flex-1">{dedent(future)}</CustomMarkdown>
       </div>
     </div>
   );
