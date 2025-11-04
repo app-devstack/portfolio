@@ -341,7 +341,8 @@ export const designWorks = [
     title: 'Nomad Sculpt',
     description: `
 		Nomad Sculptで作成した作品です！
-		これも10月半ば(2025年)くらいに衝動的に購入して
+		これも10月半ば(2025年)くらいに衝動的に購入してそこから勉強しています!
+		直感的に3Dを作成できる点にとても魅力を感じています!
 		`,
     images: [
       {
