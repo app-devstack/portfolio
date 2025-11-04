@@ -169,7 +169,7 @@
     width: 150%;
     height: 150%;
     transform: translate(-50%, -50%);
-    background-image: url(/images/noise.webp);
+    background-image: url(/images/optimized/noise.webp);
     background-attachment: fixed;
     background-size: contain;
     background-position: center;
@@ -178,7 +178,7 @@
     pointer-events: none;
     z-index: -9999;
     animation: slowRotate 500s linear infinite;
-    opacity: 0.3;
+    opacity: 0.8;
   }
 
   @keyframes slowRotate {

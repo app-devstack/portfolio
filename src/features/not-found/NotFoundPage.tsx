@@ -26,7 +26,7 @@ export default function NotFoundPage() {
             <Image
               className="pointer-events-none touch-none select-none"
               draggable={false}
-              src={'/images/notfound.png'}
+              src={'/images/optimized/notfound.webp'}
               alt="NotFound"
               width={1920 / 2}
               height={1080 / 2}

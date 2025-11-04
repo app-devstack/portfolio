@@ -45,19 +45,19 @@ export const developWorks = [
     `,
     images: [
       {
-        url: '/images/works/recipe/recipe_app.png',
+        url: '/images/optimized/works/recipe/recipe_app.webp',
         alt: 'Recipe App - メイン画面',
         aspectRatio: 'portrait',
         description: 'レシピアプリのホーム画面です!',
       },
       {
-        url: '/images/works/recipe/figma_recipe_app.png',
+        url: '/images/optimized/works/recipe/figma_recipe_app.webp',
         alt: 'Recipe App - Figmaデザイン',
         aspectRatio: 'landscape',
         description: 'Figmaでデザインした画面です!(試行錯誤のあとがたくさん...)',
       },
       {
-        url: '/images/works/recipe/recipe_app_title.png',
+        url: '/images/optimized/works/recipe/recipe_app_title.webp',
         alt: 'Recipe App - タイトル画面',
         aspectRatio: 'landscape',
         description:
@@ -90,7 +90,7 @@ export const developWorks = [
     `,
     images: [
       {
-        url: '/images/works/bv/home.png',
+        url: '/images/optimized/works/bv/home.webp',
         alt: 'Book Vault - ホーム画面',
         aspectRatio: 'portrait',
         description: `
@@ -99,20 +99,20 @@ export const developWorks = [
 				`,
       },
       {
-        url: '/images/works/bv/description.png',
+        url: '/images/optimized/works/bv/description.webp',
         alt: 'Book Vault - 詳細画面',
         aspectRatio: 'portrait',
         description: '本カテゴリの詳細画面です！',
       },
       {
-        url: '/images/works/bv/search.png',
+        url: '/images/optimized/works/bv/search.webp',
         alt: 'Book Vault - 検索画面',
         aspectRatio: 'portrait',
         description:
           '検索画面(家族用の開発画面のため、キャラクターの画像を一時的に表示しております💦)',
       },
       {
-        url: '/images/works/bv/bv-image.png',
+        url: '/images/optimized/works/bv/bv-image.webp',
         alt: 'Book Vault - イメージ画像',
         aspectRatio: 'portrait',
         description: `Eveさんというアーティストのライブに行った後、PVをイメージしてデザインしたらどうなるかな？と思い、作成した画像です！
@@ -120,7 +120,7 @@ export const developWorks = [
 				`,
       },
       {
-        url: '/images/works/bv/figma_bv_project.png',
+        url: '/images/optimized/works/bv/figma_bv_project.webp',
         alt: 'Book Vault - イメージ画像',
         aspectRatio: 'landscape',
         description: `
@@ -156,7 +156,7 @@ export const developWorks = [
     `,
     images: [
       {
-        url: '/images/works/portfolio/logo.png',
+        url: '/images/optimized/works/portfolio/logo.webp',
         alt: 'ポートフォリオ - ロゴ',
         aspectRatio: 'landscape',
         description: `
@@ -166,7 +166,7 @@ export const developWorks = [
 				`,
       },
       {
-        url: '/images/works/portfolio/not_found.png',
+        url: '/images/optimized/works/portfolio/not_found.webp',
         alt: 'ポートフォリオ - 404ページ',
         aspectRatio: 'landscape',
         description: `
@@ -178,7 +178,7 @@ export const developWorks = [
 				`,
       },
       {
-        url: '/images/works/portfolio/prev_portforio.png',
+        url: '/images/optimized/works/portfolio/prev_portforio.webp',
         alt: 'ポートフォリオ - 前バージョン',
         aspectRatio: 'portrait',
         description: `
@@ -208,19 +208,19 @@ export const developWorks = [
     `,
     images: [
       {
-        url: '/images/works/ext/dev_note_tool_ogp.png',
+        url: '/images/optimized/works/ext/dev_note_tool_ogp.webp',
         alt: '開発者向けWEBメモツール',
         aspectRatio: 'landscape',
         description: '開発者向けWEBメモツールです！chrome拡張機能として開発しました。',
       },
       {
-        url: '/images/works/ext/kintai.png',
+        url: '/images/optimized/works/ext/kintai.webp',
         alt: '勤怠半自動化ツール',
         aspectRatio: 'landscape',
         description: '勤怠半自動化ツールです！',
       },
       {
-        url: '/images/works/other/r_tech_blog.png',
+        url: '/images/optimized/works/other/r_tech_blog.webp',
         alt: 'Astro Notion Blog',
         aspectRatio: 'landscape',
         description: `
@@ -231,7 +231,7 @@ export const developWorks = [
 				`,
       },
       {
-        url: '/images/works/other/shop_mane.png',
+        url: '/images/optimized/works/other/shop_mane.webp',
         alt: 'Astro Notion Blog',
         aspectRatio: 'landscape',
         description: `
@@ -253,7 +253,7 @@ export const designWorks = [
     category: 'Design',
     images: [
       {
-        url: '/images/works/design/list.png',
+        url: '/images/optimized/works/design/list.webp',
         alt: 'Affinity Designer作品集',
         aspectRatio: 'landscape',
         description: `
@@ -289,7 +289,7 @@ export const designWorks = [
 		`,
     images: [
       {
-        url: '/images/works/design/illustrator.png',
+        url: '/images/optimized/works/design/illustrator.webp',
         alt: 'Illustrator作品集',
         aspectRatio: 'landscape',
         description: `
@@ -318,13 +318,13 @@ export const designWorks = [
 		`,
     images: [
       {
-        url: '/images/works/design/procreate.png',
+        url: '/images/optimized/works/design/procreate.webp',
         alt: 'Procreate作品集',
         aspectRatio: 'landscape',
         description: `最近の作品集です！`,
       },
       {
-        url: '/images/works/design/sakuji.png',
+        url: '/images/optimized/works/design/sakuji.webp',
         alt: '作字',
         aspectRatio: 'portrait',
         description: `
@@ -346,7 +346,7 @@ export const designWorks = [
 		`,
     images: [
       {
-        url: '/images/works/design/nomad.png',
+        url: '/images/optimized/works/design/nomad.webp',
         alt: 'ポートフォリオ',
         aspectRatio: 'landscape',
         description: `
@@ -355,7 +355,7 @@ export const designWorks = [
 				`,
       },
       {
-        url: '/images/works/design/nomad2.png',
+        url: '/images/optimized/works/design/nomad2.webp',
         alt: 'Procreate作品集',
         aspectRatio: 'landscape',
         description: `
