@@ -19,6 +19,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'maru-maruuu_portfolio',
   description: 'A portfolio site. Created by maru-maruuu',
+  openGraph: {
+    title: 'maru-maruuu_portfolio',
+    description: 'A portfolio site. Created by maru-maruuu',
+    url: 'https://portfolio.maru-maruuu.com/',
+    siteName: 'maru-maruuu Portfolio',
+    locale: 'ja_JP',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'maru-maruuu_portfolio',
+    description: 'A portfolio site. Created by maru-maruuu',
+  },
 };
 
 export default function RootLayout({
@@ -32,8 +45,6 @@ export default function RootLayout({
         className={cn(
           notoSansJp.className,
           montserratAlternates.className,
-          // notoSansJp.variable,
-          // montserratAlternates.variable,
           'h-screen max-h-dvh w-screen overflow-x-hidden overflow-y-auto overscroll-none antialiased'
         )}
       >
