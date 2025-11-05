@@ -16,21 +16,36 @@ export const viewport: Viewport = {
   viewportFit: 'cover',
 };
 
+const baseUrl = 'https://portfolio.maru-maruuu.com';
+const ogImageUrl = `${baseUrl}/images/opengraph-image.png`;
+const metaTitle = 'maru-maruuu_portfolio';
+const metaDescription = 'A portfolio site. Created by maru-maruuu';
+
 export const metadata: Metadata = {
-  title: 'maru-maruuu_portfolio',
-  description: 'A portfolio site. Created by maru-maruuu',
+  metadataBase: new URL(baseUrl),
+  title: metaTitle,
+  description: metaDescription,
   openGraph: {
-    title: 'maru-maruuu_portfolio',
-    description: 'A portfolio site. Created by maru-maruuu',
-    url: 'https://portfolio.maru-maruuu.com/',
+    title: metaTitle,
+    description: metaDescription,
+    url: baseUrl,
     siteName: 'maru-maruuu Portfolio',
     locale: 'ja_JP',
     type: 'website',
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: 'maru-maruuu Portfolio',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'maru-maruuu_portfolio',
-    description: 'A portfolio site. Created by maru-maruuu',
+    title: metaTitle,
+    description: metaDescription,
+    images: [ogImageUrl],
   },
 };
 
